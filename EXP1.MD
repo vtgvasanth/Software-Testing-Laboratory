@@ -1,100 +1,149 @@
-# Ex.No: 2   Matrix Multiplication 
+# Ex.No: 1 Write programs in Python Language to demonstrate the working of followingconstructs with possible test cases: a) do…while b) while…do c) if …else d) switch e) for 
 
-### DATE: 20.09.2024                                                                          
+### DATE: 13.8.24                                                                     
 ### REGISTER NUMBER : 212222040175
 
-### AIM: 
-Write a python program for matrix multiplication and inspect for failures.
- 
+### AIM:  
+To write python programs for do…while, while, for, switch and if…else and test with possible test 
+Cases 
+
 ### Algorithm:
 1. Start the program.
-2. Create empty list formatrix1, matrix2 and result.
-3. Get the rows and columns count from the user.
-4. Get the values of two matrix.
-5. Perform matrix multiplication and store the answer in result.
-6. Stop the program.
-
+2. Create separate files for each given program.
+3. Write simple program for each construct.
+4.  the program with possible test cases.
+5. Stop the program.
 ### Program:
 
+i)do…while:
+
 ```
-r1, c1 = input("Enter row and column count in matrix 1: ").split()
-r2, c2 = input("Enter row and column count in matrix 2: ").split()
-matrix1 = []
-matrix2 = []
-result = []
+def display():
+     start=input("Enter a positive value for START: ")
+      end=input("Enter a positive value for END: ")
+      if start.isnumeric() and end.isnumeric():
+        while True:
+            start=int(start)
+            end=int(end)
+            print(start,end=‘ ‘)
+            if start<end:
+                start+=1
+            else:
+                break
+      else:
+        print("Enter a valid positive number.") 
+  display() 
+```
 
-if r1.isnumeric() and c1.isnumeric() and r2.isnumeric() and c2.isnumeric():
-    r1 = int(r1)
-    r2 = int(r2)
-    c1 = int(c1)
-    c2 = int(c2)
- 
-    if c1 != r2:
-        print("Matrix multiplication not possible")
-    elif max(r1, c1, r2, c2) > 20 or min(r1, c1, r2, c2) == 0:
-        print("Matrix multiplication not possible")
-    else:
-        for i in range(r1):
-            a = []
-            for j in range(c1):
-                a.append(int(input("<-")))
-            matrix1.append(a)
+ii) while…do:
 
-        for i in range(r2):
-            a = []
-            for j in range(c2):
-                row.append(int(input("<-")))
-            matrix2.append(a)
-
-        for i in range(r1):
-            inter = []
-            for j in range(c2):
-                sum = 0
-                for k in range(c1):
-                    sum += matrix1[i][k] * matrix2[k][j]
-                inter.append(sum)
-            result.append(inter)
-
-        for i in range(r1):
-            for j in range(c2):
-                print(result[i][j], end=" ")
-            print()
+```
+start=input("Enter a positive value for START: ") 
+end=input("Enter a positive value for END: ")
+if start.isnumeric() and end.isnumeric():
+     start=int(start)
+     end=int(end)
+     while start<end:
+          print(start)
+          start+=1
 else:
-    print("Enter a valid number")
+   print("Enter a valid positive number.")
+```
+
+iii) switch:
+
+```
+def switch():
+    switcher={
+ 0:"even",
+  1:"odd"
+}
+n=input('Enter a value for N: ') try:
+  n=int(n)
+  print(switcher[n%2])
+except ValueError:
+   print("Enter a valid number.")
+switch() 
+```
+iv) if else:
+
+```
+def compare():
+  a=input("Enter a value for A: ")
+  b=input("Enter a value for B: ")
+  try:
+     a=int(a)
+     b=int(b)
+     if a>b:
+        print("A is greater than")
+     elif a<b:
+        print("B is greater than")
+     else:
+        print("A is equal to B")
+  except ValueError:
+        print(“Enter a valid number.”) 
+```
+
+v.) for:
+
+```
+def iterate():
+    string=input("Enter a string: ") for
+    i in string:
+       print(ord(i),end=" ")
+iterate() 
+
 ```
 
 ### Output:
 
-```
-Enter the size of a: 2 3 
-Enter the size of b: 2 3
-Matrix multiplication is not possible.
-```
+i)do…while:
 
-```
-Enter the size of a: p q 
-Enter the size of b: q s
-Matrix multiplication is not possible.
-```
+![Screenshot 2024-10-01 135840](https://github.com/user-attachments/assets/ccedd5c9-0a59-4772-af73-5c7bd4cbabe9)
 
-```
-Enter the size of a: 1.5 2 
-Enter the size of b: 2 3
-Matrix multiplication is not possible.
-```
 
-```
-Enter the size of a: 350 480
-Enter the size of b: 480 620
-Matrix multiplication is not possible.
-```
+ii) while…do:
 
-```
-Enter the size of a: -1 -2
-Enter the size of b: -2 3
-Matrix multiplication is not possible.
-```
+![Screenshot 2024-10-01 141338](https://github.com/user-attachments/assets/49775edc-bcde-4795-bbbb-6ccd8fd0772e)
+
+
+iii) switch:
+
+![Screenshot 2024-10-01 143652](https://github.com/user-attachments/assets/c1453484-1fe6-4e27-9321-2d4cd4caafb9)
+
+
+iv) if else:
+
+![Screenshot 2024-10-08 142941](https://github.com/user-attachments/assets/ec0017de-4c31-4dbd-97b1-cdc5553684b2)
+
+v) for:
+
+![Screenshot 2024-10-08 143731](https://github.com/user-attachments/assets/37aeca4a-0b5d-43c7-b638-a961ad2995c5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Result:
-Thus, the python program for matrix multiplication is implemented and the causes for its failure is introspected successfully.
+Thus, the python program to demonstrate the working of given constructs is implemented and the output is verified successfully.
+
 
